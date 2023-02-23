@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>败寇路飞.field</title>
+  
+  <subtitle>一只不断学习的渣</subtitle>
+  <link href="https://chengluffy.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://chengluffy.github.io/"/>
+  <updated>2020-07-10T05:31:00.000Z</updated>
+  <id>https://chengluffy.github.io/</id>
+  
+  <author>
+    <name>成璐飞</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LPL2020赛程日历订阅文件</title>
+    <link href="https://chengluffy.github.io/2020/07/10/LPL2020%E8%B5%9B%E7%A8%8B%E6%97%A5%E5%8E%86%E8%AE%A2%E9%98%85%E6%96%87%E4%BB%B6/"/>
+    <id>https://chengluffy.github.io/2020/07/10/LPL2020%E8%B5%9B%E7%A8%8B%E6%97%A5%E5%8E%86%E8%AE%A2%E9%98%85%E6%96%87%E4%BB%B6/</id>
+    <published>2020-07-10T05:24:11.000Z</published>
+    <updated>2020-07-10T05:31:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>发现 iOS 上的日历订阅挺好用的，至少查询这方面比打开一个软件等待响应快多了，也不用管大小写，没有那么多无用的信息。</p><span id="more"></span><p>iPhone 用户可以在 <code>设置 -&gt; 密码和账户 -&gt; 添加账户 -&gt; 其他 -&gt; 添加已订阅的日历</code></p><p>Gist 订阅源 <code>https://gist.githubusercontent.com/ChengLuffy/518e327cafeb0f87e066a51cc12b11de/raw/LPL2020.ics</code></p><p>Gitee 订阅源 <code>https://gitee.com/chengluffy/lpl2020/raw/master/LPL2020.ics</code></p><p>同步更新，请根据自己的网络环境自行选择。</p><p>一些效果图：</p><p><img src="https://user-images.githubusercontent.com/15682381/85242547-e7b62700-b471-11ea-9d3b-fbeb27e733ff.PNG"></p><p><img src="https://user-images.githubusercontent.com/15682381/85242553-ea188100-b471-11ea-9d15-2bea61354a8f.PNG"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;发现 iOS 上的日历订阅挺好用的，至少查询这方面比打开一个软件等待响应快多了，也不用管大小写，没有那么多无用的信息。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://chengluffy.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="iCalendar" scheme="https://chengluffy.github.io/tags/iCalendar/"/>
+    
+    <category term="LPL2020" scheme="https://chengluffy.github.io/tags/LPL2020/"/>
+    
+    <category term="LPL赛程" scheme="https://chengluffy.github.io/tags/LPL%E8%B5%9B%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>蓝岸订阅转Surge外部代理列表脚本</title>
+    <link href="https://chengluffy.github.io/2020/01/09/%E8%93%9D%E5%B2%B8%E8%AE%A2%E9%98%85%E8%BD%ACSurge%E5%A4%96%E9%83%A8%E4%BB%A3%E7%90%86%E5%88%97%E8%A1%A8%E8%84%9A%E6%9C%AC/"/>
+    <id>https://chengluffy.github.io/2020/01/09/%E8%93%9D%E5%B2%B8%E8%AE%A2%E9%98%85%E8%BD%ACSurge%E5%A4%96%E9%83%A8%E4%BB%A3%E7%90%86%E5%88%97%E8%A1%A8%E8%84%9A%E6%9C%AC/</id>
+    <published>2020-01-09T07:42:26.000Z</published>
+    <updated>2020-01-09T08:08:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://lananzhuanyongyaoqinglianjie002.xyz/aff.php?aff=1069">蓝岸</a> 是一个仅提供 <code>vmess</code> 协议的代理机场，详情可以直接点击上方链接进行了解。</p><p>本文主要讲解如何使用 <code>Python</code> 解析实现 <code>Surge</code> 外部代理列表的订阅。</p><span id="more"></span><p>截止 2020-01-09， <code>Surge</code> 近期已经支持 <code>vmess</code> 协议，<a href="https://lananzhuanyongyaoqinglianjie002.xyz/aff.php?aff=1069">蓝岸</a> 官网提供多种订阅方式，其中方式5仅支持 <code>Surge</code> 配置文件托管订阅，出于自己配置文件的私密性，我选择通过服务器挂载脚本实现外部代理列表订阅。</p><p>脚本开源地址：<a href="https://github.com/ChengLuffy/lanan_scripting_for_surge">ChengLuffy&#x2F;lanan_scripting_for_surge</a></p><p>使用方法：需要安装 python3（ 以及 requests module），搭建完成后下载 <a href="./lanan_sub_for_surge.py">lanan_sub_for_surge.py</a> 文件，编辑文件，填写 <code>SUB_URL</code> （蓝岸订阅方式1）、 <code>FILE_PATH</code> （转译后的文件存储的完整路径，包括文件名），之后使用 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 /&#x27;path_to&#x27;/lanan_sub_for_surge.py </span><br></pre></td></tr></table></figure><p>验证运行结果。</p><p>上方验证通过后，利用 <code>corntab</code> 进行定时运行，起一个 <code>nginx</code> 服务，将上方 <code>FILE_PATH</code> 设定成 <code>nginx</code> 的文件目录下，通过 Surge 的 <code>外部代理列表</code> 可以实现订阅。也可以在 <strong>Mac</strong> 上定时运行，并直接将 <code>FILE_PATH</code> 设定成配置文件同步目录下的文件实现订阅。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://lananzhuanyongyaoqinglianjie002.xyz/aff.php?aff=1069&quot;&gt;蓝岸&lt;/a&gt; 是一个仅提供 &lt;code&gt;vmess&lt;/code&gt; 协议的代理机场，详情可以直接点击上方链接进行了解。&lt;/p&gt;
+&lt;p&gt;本文主要讲解如何使用 &lt;code&gt;Python&lt;/code&gt; 解析实现 &lt;code&gt;Surge&lt;/code&gt; 外部代理列表的订阅。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="科学上网" scheme="https://chengluffy.github.io/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    
+    <category term="蓝岸" scheme="https://chengluffy.github.io/tags/%E8%93%9D%E5%B2%B8/"/>
+    
+    <category term="Surge" scheme="https://chengluffy.github.io/tags/Surge/"/>
+    
+    <category term="Python" scheme="https://chengluffy.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS数字金额转化成中文大写</title>
+    <link href="https://chengluffy.github.io/2019/01/11/iOS%E5%BC%80%E5%8F%91%E9%87%91%E9%A2%9D%E4%B8%AD%E6%96%87%E5%A4%A7%E5%86%99/"/>
+    <id>https://chengluffy.github.io/2019/01/11/iOS%E5%BC%80%E5%8F%91%E9%87%91%E9%A2%9D%E4%B8%AD%E6%96%87%E5%A4%A7%E5%86%99/</id>
+    <published>2019-01-11T06:20:56.000Z</published>
+    <updated>2019-01-11T06:35:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>OC:</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> 金额大小写转换</span><br><span class="line"></span><br><span class="line"> @param money 金额字符串</span><br><span class="line"> @return 中文大写金额</span><br><span class="line"> */</span><br><span class="line">- (NSString *)digitUppercase:(NSString *)money &#123;</span><br><span class="line">    NSMutableString *moneyStr = [[NSMutableString alloc] initWithString:[NSString stringWithFormat:@&quot;%.2f&quot;,[money doubleValue]]];</span><br><span class="line">    NSArray *MyScale = @[@&quot;分&quot;, @&quot;角&quot;, @&quot;元&quot;, @&quot;拾&quot;, @&quot;佰&quot;, @&quot;仟&quot;, @&quot;万&quot;, @&quot;拾&quot;, @&quot;佰&quot;, @&quot;仟&quot;, @&quot;亿&quot;, @&quot;拾&quot;, @&quot;佰&quot;, @&quot;仟&quot;, @&quot;兆&quot;, @&quot;拾&quot;, @&quot;佰&quot;, @&quot;仟&quot; ];</span><br><span class="line">    NSArray *MyBase = @[@&quot;零&quot;, @&quot;壹&quot;, @&quot;贰&quot;, @&quot;叁&quot;, @&quot;肆&quot;, @&quot;伍&quot;, @&quot;陆&quot;, @&quot;柒&quot;, @&quot;捌&quot;, @&quot;玖&quot;];</span><br><span class="line">    NSMutableString *M=[[NSMutableString alloc] init];</span><br><span class="line">    [moneyStr deleteCharactersInRange:NSMakeRange([moneyStr rangeOfString:@&quot;.&quot;].location, 1)];</span><br><span class="line">    for(NSInteger i = moneyStr.length; i &gt; 0 ; i--) &#123;</span><br><span class="line">        NSInteger MyData = [[moneyStr substringWithRange:NSMakeRange(moneyStr.length-i, 1)] integerValue];</span><br><span class="line">        if (MyData == 0) &#123;</span><br><span class="line">            if (![M hasSuffix:@&quot;零&quot;] &amp;&amp; M.length != 0) &#123;</span><br><span class="line">                [M appendString:@&quot;零&quot;];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            [M appendString:MyBase[MyData]];</span><br><span class="line">            if ([[moneyStr substringFromIndex:moneyStr.length-i+1] integerValue] == 0 &amp;&amp; i != 1 &amp;&amp; i != 2) &#123;</span><br><span class="line">                [M appendString:@&quot;元&quot;];</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            [M appendString:MyScale[i-1]];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return M;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;OC:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="中文大写" scheme="https://chengluffy.github.io/tags/%E4%B8%AD%E6%96%87%E5%A4%A7%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>chmod权限笔记</title>
+    <link href="https://chengluffy.github.io/2019/01/05/chmod%E6%9D%83%E9%99%90%E7%AC%94%E8%AE%B0/"/>
+    <id>https://chengluffy.github.io/2019/01/05/chmod%E6%9D%83%E9%99%90%E7%AC%94%E8%AE%B0/</id>
+    <published>2019-01-05T02:31:19.000Z</published>
+    <updated>2019-01-05T02:40:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th>权限</th><th>说明</th></tr></thead><tbody><tr><td><code>- r w - - - - - - -</code> (600)</td><td>只有拥有者有读写权限。</td></tr><tr><td><code>- r w - r - - r - -</code> (644)</td><td>只有拥有者有读写权限；而属组用户和其他用户只有读权限。</td></tr><tr><td><code>- r w x - - - - - -</code> (700)</td><td>只有拥有者有读、写、执行权限。</td></tr><tr><td><code>- r w x r - x r - x</code> (755)</td><td>拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。</td></tr><tr><td><code>- r w x - - x - - x</code> (711)</td><td>拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。</td></tr><tr><td><code>- r w - r w - r w -</code> (666)</td><td>所有用户都有文件读、写权限。</td></tr><tr><td><code>- r w x r w x r w x</code> (777)</td><td>所有用户都有读、写、执行权限。</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;权限&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;- r w - - - - - - -&lt;/code&gt; (600)&lt;/td&gt;
+&lt;td&gt;只有拥有者有读写权限。&lt;/td&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Git 按提交者进行代码统计</title>
+    <link href="https://chengluffy.github.io/2018/12/14/git%E6%8F%90%E4%BA%A4%E8%80%85%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%BB%9F%E8%AE%A1/"/>
+    <id>https://chengluffy.github.io/2018/12/14/git%E6%8F%90%E4%BA%A4%E8%80%85%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%BB%9F%E8%AE%A1/</id>
+    <published>2018-12-14T05:52:33.000Z</published>
+    <updated>2018-12-14T05:53:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --author=&quot;&lt;author&gt;&quot; --after=&quot;2018-10-01 00:00:00&quot; --before=&quot;2018-01-31 23:59:59&quot; --stat --pretty=tformat: --numstat | awk &#x27;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#x27; -</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>隐藏第三方库的Warning</title>
+    <link href="https://chengluffy.github.io/2017/12/22/%E9%9A%90%E8%97%8F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84Warning/"/>
+    <id>https://chengluffy.github.io/2017/12/22/%E9%9A%90%E8%97%8F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84Warning/</id>
+    <published>2017-12-22T08:40:52.000Z</published>
+    <updated>2018-04-01T08:57:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>Build Phases</code> 中选中文件，双击，<code>-w -Xanalyzer -analyzer-disable-all-checks</code>。</p><p>使用 <code>CocoaPods</code> 时可以在 <code>Podfile</code> 中添加 <code>inhibit_all_warnings!</code>。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;code&gt;Build Phases&lt;/code&gt; 中选中文件，双击，&lt;code&gt;-w -Xanalyzer -analyzer-disable-all-checks&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;CocoaPods&lt;/code&gt; 时可以在 &lt;code&gt;P</summary>
+      
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="Hide Warning" scheme="https://chengluffy.github.io/tags/Hide-Warning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>调试推送、Today、3DTouch等唤起测试App</title>
+    <link href="https://chengluffy.github.io/2017/11/24/%E8%B0%83%E8%AF%95%E6%8E%A8%E9%80%81%E3%80%81Today%E3%80%813DTouch%E7%AD%89%E5%94%A4%E8%B5%B7%E6%B5%8B%E8%AF%95App/"/>
+    <id>https://chengluffy.github.io/2017/11/24/%E8%B0%83%E8%AF%95%E6%8E%A8%E9%80%81%E3%80%81Today%E3%80%813DTouch%E7%AD%89%E5%94%A4%E8%B5%B7%E6%B5%8B%E8%AF%95App/</id>
+    <published>2017-11-24T01:52:46.000Z</published>
+    <updated>2017-11-24T02:07:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>原文地址： <a href="https://weibo.com/1608617333/FwwONgqHr?type=comment#_rnd1511488274896" title="weibo">高老师很忙的微博</a></p><p>在调试推送、Today、3DTouch等唤起测试App的时候（此时App未启动），我们通常Run的方式是不行的，因为Run后App就启动了，不满足调试环境。Xcode为我们提供了Attach的方式进行调试，使用起来也是超简单的。操作方式如下：</p><span id="more"></span><p>前提：已经加了断点（比如application: didFinishLaunchingWithOptions:方法里加断点）</p><ol><li><p>Attach之前需要把测试App的进程杀掉（如果不杀掉进程，这种方式是无法断点调试的）；</p></li><li><p>选择你要Attach的测试App,有两种方式：在Debug下拉菜单下面有Attach to Process选项（直接选择你的测试App，如图1）和Attach to Process by PID or Name选项（输入名称，如图2）；</p></li><li><p>用推送、Today、3DTouch等方式唤起，就大功告成了（如图3）</p></li></ol><p><img src="/img/%E5%9B%BE1.jpg" alt="图1">图1</p><p><img src="/img/%E5%9B%BE2.jpg" alt="图2">图2</p><p><img src="/img/%E5%9B%BE3.jpg" alt="图3">图3</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;原文地址： &lt;a href=&quot;https://weibo.com/1608617333/FwwONgqHr?type=comment#_rnd1511488274896&quot; title=&quot;weibo&quot;&gt;高老师很忙的微博&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在调试推送、Today、3DTouch等唤起测试App的时候（此时App未启动），我们通常Run的方式是不行的，因为Run后App就启动了，不满足调试环境。Xcode为我们提供了Attach的方式进行调试，使用起来也是超简单的。操作方式如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="Attach" scheme="https://chengluffy.github.io/tags/Attach/"/>
+    
+    <category term="Xcode" scheme="https://chengluffy.github.io/tags/Xcode/"/>
+    
+    <category term="调试" scheme="https://chengluffy.github.io/tags/%E8%B0%83%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态显示隐藏状态栏</title>
+    <link href="https://chengluffy.github.io/2017/11/10/%E5%8A%A8%E6%80%81%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E7%8A%B6%E6%80%81%E6%A0%8F/"/>
+    <id>https://chengluffy.github.io/2017/11/10/%E5%8A%A8%E6%80%81%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E7%8A%B6%E6%80%81%E6%A0%8F/</id>
+    <published>2017-11-10T06:59:55.000Z</published>
+    <updated>2017-11-10T07:04:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>代码片段：</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">var hideStatusBar: Bool = false</span><br><span class="line">override func viewDidLoad() &#123;</span><br><span class="line">    super.viewDidLoad()</span><br><span class="line">    // Do any additional setup after loading the view, typically from a nib.</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">override func didReceiveMemoryWarning() &#123;</span><br><span class="line">    super.didReceiveMemoryWarning()</span><br><span class="line">    // Dispose of any resources that can be recreated.</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@IBAction func btnAction(_ sender: Any) &#123;</span><br><span class="line">    UIView.animate(withDuration: 0.5) &#123; () -&gt; Void in</span><br><span class="line">        self.hideStatusBar = self.hideStatusBar == true ? false : true</span><br><span class="line">        self.setNeedsStatusBarAppearanceUpdate()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation &#123;</span><br><span class="line">    return .slide</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">override var prefersStatusBarHidden: Bool &#123;</span><br><span class="line">    return hideStatusBar</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;代码片段：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="状态栏" scheme="https://chengluffy.github.io/tags/%E7%8A%B6%E6%80%81%E6%A0%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快捷方式app简单使用说明</title>
+    <link href="https://chengluffy.github.io/2017/06/13/%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8Fapp%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
+    <id>https://chengluffy.github.io/2017/06/13/%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8Fapp%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</id>
+    <published>2017-06-13T02:28:52.000Z</published>
+    <updated>2019-02-18T09:56:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://itunes.apple.com/us/app/%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F-%E6%8A%8A%E6%82%A8%E5%B8%B8%E6%89%93%E5%BC%80%E7%9A%84%E5%8A%A8%E4%BD%9C%E9%92%89%E5%9C%A8%E9%80%9A%E7%9F%A5%E6%A0%8F/id1198889322?l=zh&ls=1&mt=8" title="App Store">快捷方式</a> 是我为了家人方便开发的一款很简单的软件，后期加上了一些我自己的脑洞，成了现在这样的一款软件。软件完全开源，遵守 <code>SATA</code> 协议，地址是 <a href="https://github.com/ChengLuffy/app-Prefs" title="Github">ChengLuffy&#x2F;app-Prefs</a>。</p><p>由于系统API 限制，所以在下个系统版本（iOS 11）打开 <strong>系统设置</strong> 的相关方法可能无法在 <strong>Today Widget</strong> 上正常使用，我需要等到 GM 版本发布后进行测试才能完全确定后面这个软件的规划发展，但不管怎么说，离 <code>iOS 11</code> 还有3个月的时间，下面就简单介绍下用户反馈最多的问题，如何使用这款软件😂😂😂</p><span id="more"></span><h2 id="2018-12-5-更新"><a href="#2018-12-5-更新" class="headerlink" title="2018.12.5 更新"></a>2018.12.5 更新</h2><p><a href="https://raw.githubusercontent.com/ChengLuffy/app-Prefs/master/KJ.json">KJ.json</a></p><p>感谢用户：橙 皮(ZJChengpi) 分享的一个配置文件，应该是我知道的的收集 <code>URL Scheme</code> 最多的用户，在作者同意下放到 <code>Github</code> 仓库中分享给大家，希望能帮助到您。您可以右键或长按上面的链接 复制 并到软件内下载配置并导入。</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>软件是通过 <code>URL Scheme</code> 进行各种动作操作，关于 <code>URL Scheme</code> 是什么，建议阅读 <a href="https://sspai.com/post/31500" title="sspai">URL Schemes 使用详解</a> 进行了解。在这款软件里，我们所有的操作都离不开 <code>URL Scheme</code>，可以说，你想打开的任何一个动作，只要我们能找到他所对应的 <code>URL Scheme</code> 并添加到软件内，就可以使用了。</p><h2 id="如何得知一个第三方应用的URL-Scheme"><a href="#如何得知一个第三方应用的URL-Scheme" class="headerlink" title="如何得知一个第三方应用的URL Scheme"></a>如何得知一个第三方应用的<code>URL Scheme</code></h2><p>获得一个动作对应的 <code>URL Scheme</code> 的方法，其实 <a href="https://sspai.com/post/31500" title="sspai">URL Schemes 使用详解</a> 也有提到，但时代在进步，程序员和产品经理秉承一贯的折腾精神，经常性的一个动作之前还可以用，过几天就不能用了，这个是你想打开的软件所对应的开发者，所决定的，我们只能发出严正抗议，除此以外毫无办法；而新的 <code>URL Scheme</code> 开发者又不会公布，大部分人都靠猜，所以获取你想知道动作对应的 <code>URL Scheme</code> 的最简单且最直接的方法就是，发邮件给那个软件的开发者，问他。</p><p>说到这里，顺带一提，其实 <code>App Store</code> 里的评论，对于开发者和用户沟通一点作用都没有，大部分人和我一样，都是想起来才去看下，然后我回复，但是用户又不一定能看到，适合于软件的使用体验说明，但不适合问题反馈和功能沟通，所以还是建议 邮件 或者 Issues 进行问题沟通功能交流。</p><p>发邮件给开发者能不能得到答案，全在于开发者的心情，很有可能长时间得不到回复，所以这里再推荐一个方法，利用搜索引擎搜索答案。由于使用 <code>iPhone</code> 的用户团体很大，而同类应用，例如 <code>Launcher、Workflow、Pin...</code> 都有很大用户基础，而这些应用的基本原理是一样的，所以对于一个常用应用，我们通过搜索 <code>应用名称+URL Scheme</code> 都能得到答案，但是由于 版本 的迭代，可能过往可以使用的现在这个 系统版本或者应用版本 不能在使用，所以要进行繁琐的尝试才可以找到正解。</p><p>如果我只想打开一个应用，有没有更简单的方法？</p><p><em><strong>⚠️ iTuenes 已经无法下载 ipa 文件，所以下面这种方法失效</strong></em></p><p>答案当然是有，无论是 <code>windows</code> 还是 <code>macOS</code>，只要有 <strong>iTunes</strong>，从 <strong>iTunes</strong> 上下载应用包到电脑，右键在文件夹显示，将应用包的后缀名从 <code>.ipa</code> 改成 <code>.zip</code>，然后用相应的压缩包解压工具解压，打开解压后的 <code>Payload</code> 文件夹，此时若是 <code>macOS</code> 就 <code>右键文件夹下的文件 -&gt; 显示包内容</code>，若是 <code>windows</code> 就直接打开 <code>.app</code> 文件夹。在下一个文件夹目录下找到 <code>info.plist</code> 这个文件，用 合适的文本工具打开 或者将其后缀改为 <code>.txt</code> 然后打开，搜索 <code>CFBundleURLSchemes</code> ，每一个 <code>CFBundleURLSchemes</code> 下对应的就是 这个应用暴漏的 <code>URL Scheme</code>，以 <code>QQ邮箱为例</code>，我们搜索得到：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;array&gt;</span><br><span class="line">      &lt;dict&gt;</span><br><span class="line">        &lt;key&gt;CFBundleTypeRole&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;Editor&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;CFBundleURLName&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;com.tencent.qqmail&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;           &lt;-----</span><br><span class="line">        &lt;array&gt;</span><br><span class="line">          &lt;string&gt;qqmail&lt;/string&gt;</span><br><span class="line">          &lt;string&gt;qqQuickLogin&lt;/string&gt;</span><br><span class="line">        &lt;/array&gt;</span><br><span class="line">      &lt;/dict&gt;</span><br><span class="line">      &lt;dict&gt;</span><br><span class="line">        &lt;key&gt;CFBundleTypeRole&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;Editor&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;CFBundleURLName&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;weixin&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;           &lt;-----</span><br><span class="line">        &lt;array&gt;</span><br><span class="line">          &lt;string&gt;wx4b7110bee4d7c9b9&lt;/string&gt;</span><br><span class="line">        &lt;/array&gt;</span><br><span class="line">      &lt;/dict&gt;</span><br><span class="line">      &lt;dict&gt;</span><br><span class="line">        &lt;key&gt;CFBundleTypeRole&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;Editor&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;CFBundleURLName&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;tencentApiIdentifier&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;           &lt;-----</span><br><span class="line">        &lt;array&gt;</span><br><span class="line">          &lt;string&gt;tencent100686947.content&lt;/string&gt;</span><br><span class="line">        &lt;/array&gt;</span><br><span class="line">      &lt;/dict&gt;</span><br><span class="line">      &lt;dict&gt;</span><br><span class="line">        &lt;key&gt;CFBundleTypeRole&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;Editor&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;CFBundleURLName&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;tencent&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;           &lt;-----</span><br><span class="line">        &lt;array&gt;</span><br><span class="line">          &lt;string&gt;tencent100686947&lt;/string&gt;</span><br><span class="line">        &lt;/array&gt;</span><br><span class="line">      &lt;/dict&gt;</span><br><span class="line">    &lt;/array&gt;</span><br></pre></td></tr></table></figure><p>上面 **&lt;—–** 所对应的 就是我们搜索定位到的关键词，其下 <code>&lt;string&gt; &lt;/string&gt;</code> 中间的内容就是我们要的 <code>URL Scheme</code>，以 <code>qqmail</code> 为例，对应的动作链接就是 <code>qqmail://</code> 至于其他更深层次的功能，就不是我们能知道的了。</p><p><em><strong>iOS 11 以后私有 API发生变化，所以下面这种方法也失效了</strong></em></p><p>还有一个方法，就是自行编译安装 <a href="https://github.com/cyanzhong/Retriever" title="Github">cyanzhong&#x2F;Retriever</a> ，然后在手机上就可以找到已安装应用的 info.plist 文件，但由于调用了 <strong>私有API</strong> 该应用无法上架，只能自己用 <code>Mac+Xcode</code> 进行编译安装。</p><p>对于商店上免费下载的应用，可以直接复制链接，然后发邮件给我，我看到后会尽快查询回复，至于付费下载的应用，看缘分，我买了就可以帮你查下，如果没买，抱歉啊，作者很穷买不起，推荐在 <code>Github</code> 上开 <code>Issues</code> 进行询问，可以方便其他使用者讨论分享查询。</p><h2 id="如何得知系统设置所对应的URL-Scheme"><a href="#如何得知系统设置所对应的URL-Scheme" class="headerlink" title="如何得知系统设置所对应的URL Scheme"></a>如何得知系统设置所对应的<code>URL Scheme</code></h2><p>快捷方式内置了我能找到的所有能找到的系统设置打开方法，如果没有您想要的，很可能就是找不到了，抱歉。</p><h2 id="最后说两句"><a href="#最后说两句" class="headerlink" title="最后说两句"></a>最后说两句</h2><p>一，这个应用还是很简陋的，<del>在两次限免后达到了 2k 左右的下载量</del>，2018.12.6 更新：下载次数1万2千次，上架期间日活100多一点，实际使用的人可能很少，但无论如何，很感谢您的使用，如果您在使用中遇到什么问题，或者需要什么功能，可以发邮件或者开<code>Issues</code>对我说，我会尽量去完善这个应用。</p><p>二，同类型更优秀，更完善的应用还是有的，例如 <code>Workflow</code> Apple 官方应用，免费，有更多神奇而强大的功能，缺点是全英文，比较复杂；<code>Pin</code>&#x2F;<code>JSBox</code> 更强大的 剪切板内容工具，抓图抓视频网页截图都可以很简单的实现，售价18。有条件或者有这方面需求的可以去看看这些应用。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>赚钱真的好难，以前下班后还能写写代码，现在有点困难，每天昏昏噩噩，也真的是见识到更广过的天空才更加佩服那些大佬们，也是真正开始赚钱才开始意识到自己有多渣。</p><p>这个软件里很多代码都是丑陋的，很多思路都是错的，很多功能想实现也没有实现，而我自己也放弃使用这个应用痴迷 <code>JSBox</code> ，慢慢有了这样感觉，很多东西大佬已经实现，我做不到更好了，甚至没有办法做到他们的程度，也没有必要去写一个功能重复的应用，所以，到此为止吧。</p><p>之后会进入维护期，或许会开一个调用私有 API 的版本（无法发布），但是应该除了修复问题优化一些不方便的地方不会再提交新版本了。</p><p>应用应该不会主动下架，但是可能因为交不起开发者账号费用而被下架，还请理解！</p><p>感谢大家！</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F-%E6%8A%8A%E6%82%A8%E5%B8%B8%E6%89%93%E5%BC%80%E7%9A%84%E5%8A%A8%E4%BD%9C%E9%92%89%E5%9C%A8%E9%80%9A%E7%9F%A5%E6%A0%8F/id1198889322?l=zh&amp;ls=1&amp;mt=8&quot; title=&quot;App Store&quot;&gt;快捷方式&lt;/a&gt; 是我为了家人方便开发的一款很简单的软件，后期加上了一些我自己的脑洞，成了现在这样的一款软件。软件完全开源，遵守 &lt;code&gt;SATA&lt;/code&gt; 协议，地址是 &lt;a href=&quot;https://github.com/ChengLuffy/app-Prefs&quot; title=&quot;Github&quot;&gt;ChengLuffy&amp;#x2F;app-Prefs&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;由于系统API 限制，所以在下个系统版本（iOS 11）打开 &lt;strong&gt;系统设置&lt;/strong&gt; 的相关方法可能无法在 &lt;strong&gt;Today Widget&lt;/strong&gt; 上正常使用，我需要等到 GM 版本发布后进行测试才能完全确定后面这个软件的规划发展，但不管怎么说，离 &lt;code&gt;iOS 11&lt;/code&gt; 还有3个月的时间，下面就简单介绍下用户反馈最多的问题，如何使用这款软件😂😂😂&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="使用说明" scheme="https://chengluffy.github.io/tags/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
+    
+    <category term="快捷方式" scheme="https://chengluffy.github.io/tags/%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/"/>
+    
+    <category term="Shortcuts" scheme="https://chengluffy.github.io/tags/Shortcuts/"/>
+    
+    <category term="app-Prefs" scheme="https://chengluffy.github.io/tags/app-Prefs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS程序内通过代码回到桌面</title>
+    <link href="https://chengluffy.github.io/2017/02/20/iOS%E7%A8%8B%E5%BA%8F%E5%86%85%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E5%9B%9E%E5%88%B0%E6%A1%8C%E9%9D%A2/"/>
+    <id>https://chengluffy.github.io/2017/02/20/iOS%E7%A8%8B%E5%BA%8F%E5%86%85%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E5%9B%9E%E5%88%B0%E6%A1%8C%E9%9D%A2/</id>
+    <published>2017-02-19T16:39:51.000Z</published>
+    <updated>2019-01-06T06:44:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Swift:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 进入后台</span><br><span class="line">UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)</span><br><span class="line">// 结束应用</span><br><span class="line">DispatchQueue.main.asyncAfter(deadline: .now() + 1.25) &#123;</span><br><span class="line">  UIApplication.shared.perform(Selector((&quot;terminateWithSuccess&quot;)))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>需要注意的是，单独第一行就可以达到 <strong>有动画回到桌面程序进入后台的目的</strong>，单独第二行 <strong>没有动画回到桌面并终止应用</strong>，两行同时使用可以 <strong>动画回到桌面并终止应用</strong>。 根据需要选择其中一个或两个一起使用。</p><p>在 iOS 12 下，延迟 1.25 秒结束应用不会出问题。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Swift:&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/sp</summary>
+      
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="iOS程序内回到桌面小技巧" scheme="https://chengluffy.github.io/tags/iOS%E7%A8%8B%E5%BA%8F%E5%86%85%E5%9B%9E%E5%88%B0%E6%A1%8C%E9%9D%A2%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpechtLite简单使用说明</title>
+    <link href="https://chengluffy.github.io/2016/11/29/SpechtLite%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
+    <id>https://chengluffy.github.io/2016/11/29/SpechtLite%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</id>
+    <published>2016-11-29T07:05:47.000Z</published>
+    <updated>2020-01-09T07:45:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/zhuhaow/SpechtLite" title="Github"><code>SpechtLite</code></a> 是基于 <a href="https://github.com/zhuhaow/NEKit" title="Github"><code>NEKit</code></a> 开发的一款网络调试 <strong>macOS</strong> 软件，这里简单说明一下软件的使用的配置。</p><span id="more"></span><p>您可以直接在 <a href="https://github.com/zhuhaow/SpechtLite/releases" title="Github">zhuhaow&#x2F;SpechtLite</a> 页面下载，然后移动到 <strong>应用程序</strong> 文件夹；也可以使用 <code>brew cask install spechtlite</code> 下载安装，由于 <code>Homebrew</code> 版本更新不及时，所使用 <code>Homebrew</code> 安装后请先 <code>check for updates</code> 确认更新到最新版本，使用最新功能。</p><p>打开软件后，在系统的的 <strong>状态菜单栏</strong> 可以找到 <code>SpechtLite</code> 的图标，点击后弹出菜单如下：</p><p><img src="/img/memu.png" alt="SpechtLiteMenu"></p><h2 id="菜单各项介绍："><a href="#菜单各项介绍：" class="headerlink" title="菜单各项介绍："></a>菜单各项介绍：</h2><hr><ol><li><code>Stop proxy server</code> 快捷键 <code>⌘+D</code> ：断开代理链接；</li><li><code>Open config folder</code> 快捷键 <code>⌘+C</code> ：打开配置文件的文件夹，具体如何配置见：<a href="/2016/11/29/SpechtLite%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/#%E9%85%8D%E7%BD%AE%EF%BC%9A">配置</a> ；</li><li><code>Reload config</code> 快捷键 <code>⌘+R</code> ：重新加载配置；</li><li><code>Set as system proxy</code> ：设置为系统代理，正常使用必须打开；</li><li><code>Copy shell export command</code> ：拷贝是终端通过代理的命令；</li><li><code>Allow Clients From Lan</code> ：局域网内分享代理，具体见 <a href="/2016/11/29/SpechtLite%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/#%E5%B1%80%E5%9F%9F%E7%BD%91%E5%88%86%E4%BA%AB%E4%BB%A3%E7%90%86%EF%BC%9A">局域网分享代理</a>；</li><li><code>Speed test</code> ：速度测试（对<code>Shadowsocks</code>仅供对比测试）；</li><li><code>Autostart at login</code> ：系统登录时打开；</li><li><code>Use dev channel</code> ：接受测试版本推送；</li><li><code>Check for updates</code> 快捷键 <code>⌘+U</code> ：检查更新；</li><li><code>Show log</code> ：显示日志；</li><li><code>Help</code> ：打开项目主页；</li><li><code>About</code> ：关于；</li><li><code>Exit</code> 快捷键 <code>⌘+Q</code> ：退出软件。</li></ol><h2 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h2><hr><p>打开软件配置文件的文件夹，删除所有；打开终端 运行命令:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/ChengLuffy/SpechtLite.Config.git</span><br></pre></td></tr></table></figure><p>上面是我自己维护的一个规则，后续可以根据自己的需求进行更改。<br>运行完毕后，打开 <code>Proxy.yaml</code> 文件进行编辑；<br><code>SpechtLite</code> 提供多种代理方法，这里只介绍 <code>Shadowsocks</code> 协议配置；<br>删除不需要的 <code>adapter</code> 。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- id: adapter3</span><br><span class="line">  type: ss</span><br><span class="line">  host: ss.server</span><br><span class="line">  port: 3128</span><br><span class="line">  # Currently support: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5</span><br><span class="line">  # Shadowsocks encryption methods are not fully tested, please report if there is anything not working.</span><br><span class="line">  method: AES-128-CFB</span><br><span class="line">  password: ss_password</span><br><span class="line">  # Currently support: origin and verify_sha1</span><br><span class="line">  protocol: origin</span><br><span class="line">  # Currently support: origin, http_simple and tls1.2_ticket_auth</span><br><span class="line">  obfs: origin</span><br></pre></td></tr></table></figure><p> <code>id</code> 为自定义的节点名称； <code>type</code> 为代理的类型，<code>ss</code> 即为 <code>Shadowsocks</code> 协议， <code>host port method password</code> 对应 服务器、端口、加密方式、密码， <del><code>ota</code> 为 <code>One-Time-Auth</code> 如果服务端配置，应该改对应值为true，<code>ssr</code> 协议暂不支持正在路上。添加多个节点复制修改即可</del> <code>ota</code> 配置使用 <code>protocol: verify_sha1</code>，目前版本 混淆支持 <code>http_simple &amp; tls1.2_ticket_auth</code>。<br> 下面的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- id: proxy</span><br><span class="line">  type: SPEED</span><br></pre></td></tr></table></figure><p>是 <a href="https://github.com/zhuhaow/NEKit" title="Github"><code>NEKit</code></a> 独有特性，简单来说就是每一个通过规则分流的网络请求，在设置的 <code>delay</code> （单位毫秒）后发送请求，哪个节点率先响应，那网络请求就走哪个节点，所有的节点应当按照以下格式添加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- id: proxy</span><br><span class="line">  delay: 300</span><br></pre></td></tr></table></figure><p><code>delay</code>根据节点质量和个人需求设置，<code>direct</code> 可有可无。<br>再下 <code>reject</code> 不用修改<br>再下为 分流规则， <code>list</code> 是域名列表，正则匹配； <code>iplist</code> 是 <code>IP</code> 段， <code>country</code> 是根据 <code>GEOIP</code> 判断国家走相应的规则， <code>file</code> 为文件路径， <code>adapter</code> 分：直连、代理、拒绝，其中代理可以设置<code>speed</code>节点组 <strong>id</strong> ，或者单个节点 <strong>id</strong>。</p><p>注：由于 <code>mail.app</code> 🔗 <code>outlook</code> 邮箱的请求的 <strong>URL</strong> 直连很不稳定，有时直接断流，而使用 <strong>speed</strong> 规则会导致登陆 <strong>IP</strong> 多变，触发异常报告，所以我在 <code>yaml</code> 文件 <code>proxy</code> 规则之前 添加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- type: list</span><br><span class="line">  file: ~/.SpechtLite/one</span><br><span class="line">  adapter: adapter1</span><br></pre></td></tr></table></figure><p>同时在 <code>~/.SpechtLite/</code> 下创建名为  <code>one</code> 的文件，在其中加入需要进行代理处理，却需要稳定单个节点的网络请求 <strong>域名</strong>。</p><p>相应的玩法还有很多，比如设定某些关键词对应的请求走某个节点，或者对应某个国家对应的请求走某个节点。<br>注意规则顺序从上而下判别。<br>在对应的规则文件内注意不要有空白行，以防止出现错误，编辑完成后保存，点击 <code>Reload config</code> 如果没有出现错误，☑️<code>Set as system proxy</code>就可以正常使用了。<br>创建多个 <code>yaml</code> 文件保存点击 <code>Reload config</code>，即可在菜单栏☑️切换。<br>目前没有办法选在某个配置文件下的某个节点。</p><h2 id="局域网分享代理："><a href="#局域网分享代理：" class="headerlink" title="局域网分享代理："></a>局域网分享代理：</h2><hr><p>使用方法：</p><ol><li>在 <code>SpechtLite</code> ☑️ <kbd>Allow Clients From Lan</kbd>；</li><li>需要科学上网的同一局域网下设备，设置 <code>HTTP 代理</code>：</li></ol><ul><li><code>iPhone</code> 点击所链接网络详情，在下面的 <code>HTTP 代理</code> 选择手动。</li><li><code>windows</code> 在 <code>Internet 选项</code> 选择 <code>局域网设置</code>，☑️ <code>代理服务器</code>。</li><li><code>Andriod</code> 没研究过。。。</li></ul><ol start="3"><li>地址／服务器 写 <code>SpechtLite</code> 所在的 <code>Mac</code> 的 <strong>局域网地址</strong>，端口 写 <code>yaml</code> 配置文件第一行 <code>port:</code> 后所跟的参数，默认是 <code>9090</code>。</li></ol><p>注：配合 <strong>Proxifier</strong> 使用效果更好。</p><p>如果出现问题，可以直接这项目的 <a href="https://github.com/zhuhaow/SpechtLite" title="Github">Github主页</a> 提 <code>Issues</code> ，也可以进入 <a href="https://telegram.me/NEKitGroup" title="Telegram">Telegram</a> 讨论。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/zhuhaow/SpechtLite&quot; title=&quot;Github&quot;&gt;&lt;code&gt;SpechtLite&lt;/code&gt;&lt;/a&gt; 是基于 &lt;a href=&quot;https://github.com/zhuhaow/NEKit&quot; title=&quot;Github&quot;&gt;&lt;code&gt;NEKit&lt;/code&gt;&lt;/a&gt; 开发的一款网络调试 &lt;strong&gt;macOS&lt;/strong&gt; 软件，这里简单说明一下软件的使用的配置。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="科学上网" scheme="https://chengluffy.github.io/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    
+    <category term="SpechtLite" scheme="https://chengluffy.github.io/tags/SpechtLite/"/>
+    
+    <category term="macOS" scheme="https://chengluffy.github.io/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>macOS Sierra开启画中画</title>
+    <link href="https://chengluffy.github.io/2016/11/11/macOS-Sierra%E5%BC%80%E5%90%AF%E7%94%BB%E4%B8%AD%E7%94%BB/"/>
+    <id>https://chengluffy.github.io/2016/11/11/macOS-Sierra%E5%BC%80%E5%90%AF%E7%94%BB%E4%B8%AD%E7%94%BB/</id>
+    <published>2016-11-11T01:25:09.000Z</published>
+    <updated>2016-11-11T01:35:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><span id="more"></span><p>画中画功能需要<code>Mac</code> 系统为 <code>sierra</code>，浏览器使用 <strong>Safari</strong> ，网站支持 <strong>HTML</strong> 播放器，比如 <kbd><code>YouTuBe</code> <code>BiliBili</code></kbd>。</p><ol><li>在视频播放窗口右键双击，就会出现 <strong>进入画中画</strong> 的选项，点击后画中画开启。</li><li>随便保存个书签，修改名字为 <strong>画中画</strong> ，再修改地址如下：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:document.querySelector(%22video%22).webkitSetPresentationMode(%22picture-in-picture%22)</span><br></pre></td></tr></table></figure>在视频播放时点击书签就可以。</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="macSierra" scheme="https://chengluffy.github.io/categories/macSierra/"/>
+    
+    
+    <category term="PinP" scheme="https://chengluffy.github.io/tags/PinP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使自己的Framework支持Carthage</title>
+    <link href="https://chengluffy.github.io/2016/10/21/%E4%BD%BF%E8%87%AA%E5%B7%B1%E7%9A%84Framework%E6%94%AF%E6%8C%81Carthage/"/>
+    <id>https://chengluffy.github.io/2016/10/21/%E4%BD%BF%E8%87%AA%E5%B7%B1%E7%9A%84Framework%E6%94%AF%E6%8C%81Carthage/</id>
+    <published>2016-10-21T03:45:40.000Z</published>
+    <updated>2016-10-21T09:11:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录下学习 <em>使自己的 <code>Framework</code>支持 <code>Carthage</code></em> ，原文链接： <a href="https://medium.com/@shenghuawu/support-carthage-for-your-swift-framework-f294c691f9ba#.gqeudhs54" title="medium">Support Carthage for your Swift framework</a></p><span id="more"></span><ol><li>新建工程，选择 <em><strong>Cocoa Touch Framework</strong></em>；</li><li>在新工程内进行编写自己的代码，使用 <code>open</code> 修饰要暴露的 <code>class、method</code>, 注意确保 <strong>Build Phases</strong> -&gt; <strong>Compile Sources</strong> 内包含你所写的代码文件，也可以把写好的直接加到工程内；</li><li>需要创建演示 <code>demo</code> 的，创建相应的 <code>target</code> ，并便携演示代码文件，在 <strong>Build Phases</strong> -&gt; <strong>Compile Sources</strong> 添加自己的 <code>Framework</code> 的 <code>.swift</code> 文件；</li><li>在 <code>Manage Schemes</code> 内将， <code>framework</code> 以及演示用 <code>target</code> 勾选 <strong>shared</strong>；</li><li>将工程提交到 <code>Github</code>;</li><li>创建 <em><strong>release</strong></em>。</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;记录下学习 &lt;em&gt;使自己的 &lt;code&gt;Framework&lt;/code&gt;支持 &lt;code&gt;Carthage&lt;/code&gt;&lt;/em&gt; ，原文链接： &lt;a href=&quot;https://medium.com/@shenghuawu/support-carthage-for-your-swift-framework-f294c691f9ba#.gqeudhs54&quot; title=&quot;medium&quot;&gt;Support Carthage for your Swift framework&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="Carthage" scheme="https://chengluffy.github.io/tags/Carthage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10.17</title>
+    <link href="https://chengluffy.github.io/2016/10/17/10-17/"/>
+    <id>https://chengluffy.github.io/2016/10/17/10-17/</id>
+    <published>2016-10-17T02:10:16.000Z</published>
+    <updated>2016-11-07T07:00:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="讲下无聊的事情。"><a href="#讲下无聊的事情。" class="headerlink" title="讲下无聊的事情。"></a>讲下无聊的事情。</h2><span id="more"></span><p>有人一直教育我，说，不要争这一时，以后会有更好的。<br>有人说，你失去了太阳还有月亮，你失去了月亮还有群星。<br>他们这么说着，以 <strong>为你好</strong> 的名义对我进行劝说。</p><p>我一直以来也是这么以为的的，所有的东西，拿得起就放的下，傲首挺胸，<strong>前进！前进！前进！！</strong><br>有时候睡不着，最怕的就是回想很久之前的事，最最怕的是想到 <del>如果当时我没有这样会怎样</del> 。所以选择性的忘记很多东西，忽略很多东西，搞得朋友们谈起往事，我还要一点点回忆他们所说的人、事，现在发现，这是一个大失误，其他的都记不清了，所能回想的都是自己不愿意回想的， <del>如果当时，如果我有能力负担着它们一起前进</del>。</p><p>别人把你当傻瓜，最可笑的是你说出了自己的苦衷，却觉得自己还是个傻瓜。<br>父母的命令我本来准备随时抗争的。我有个邻居，正好比我大几岁，正好和我想法一样，正不好，他先抗争了下。离家出走，带着自己喜欢的姑娘，跑到自己想去的地方，过自己想要的生活，然后彻底断绝了和家人的所有联系，多好，多不好。第三年，父亲猝死，母亲伤心过渡，现在半疯半傻，弟弟娶的老婆能和弟弟每天能从夜里12 点吵到起床吃饭。我不知道这和他的离家出走有没有联系，发生这么多事，老爸下葬的时候都联系不到他，或许他和我当时的想法一样，混出个名堂，再回家给老子长脸。世事难料！<br>我就这样看着他把我的想法先行试了一遍，我看不到他现在的生活，却看到了一种可能的后果。</p><p><strong>我怂了。</strong><br>怂了就认了，一直以来也没什么抱怨，好好的活着。之前能喝半斤白酒，醉后屁话不停，现在一罐啤酒就醉，醉后闭口无言，也无从说起。越来越喜欢看喜剧，有时莫名奇妙被戳中了笑点，好过一切。<br><em>生活这玩意儿，是怎么把人一步步逼向绝路的，不是活不下去的人生，是必须在明知毫无期盼的情况下活下去。</em></p><p>如果现在有一件事，别人不让我做不让我得， <strong>为我好</strong>，我其实是知道的，这一次不争，以后就是彻底失去了机会，与世无争。我最近总在想大不了一败涂地，也好过被过往的梦魇一直缠绕。但是……我还是害怕上面的事出现在我身上，一步也迈不出，一次反抗也没有。</p><p>都是借口，全是扯淡，败寇路飞，一败涂地。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;讲下无聊的事情。&quot;&gt;&lt;a href=&quot;#讲下无聊的事情。&quot; class=&quot;headerlink&quot; title=&quot;讲下无聊的事情。&quot;&gt;&lt;/a&gt;讲下无聊的事情。&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="随笔" scheme="https://chengluffy.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="丑事" scheme="https://chengluffy.github.io/tags/%E4%B8%91%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS开发参考整理</title>
+    <link href="https://chengluffy.github.io/2016/10/10/iOS%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83%E6%95%B4%E7%90%86/"/>
+    <id>https://chengluffy.github.io/2016/10/10/iOS%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83%E6%95%B4%E7%90%86/</id>
+    <published>2016-10-10T05:49:40.000Z</published>
+    <updated>2020-03-23T07:48:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>以 <code>alertSheet</code> 的方式进行图片选取： <a href="https://github.com/d0ping/DBAttachmentPickerController" title="Github">DBAttachmentPickerController</a>;</li><li><a href="http://www.jianshu.com/p/3f03897cf98a" title="简书">通过UIDocumentInteractionController预览和分享”史蒂夫•乔布斯传”</a>:以<code>UIDocumentInteractionController</code>进行文件分享;</li><li>压力触摸查看图片， <a href="https://github.com/Yalantis/ForceBlur" title="Github">Yalantis&#x2F;ForceBlur</a>;<span id="more"></span></li><li><code>iOS 10</code> 之后，通过 <strong>Today Widget</strong> 跳转系统设置页，<a href="https://github.com/cyanzhong/app-tutorials/blob/master/prefs.md" title="Github">cyanzhong&#x2F;app-tutorials</a>;</li><li><a href="https://github.com/huanz/surge-hosts" title="Github"><kbd><code>Surge-Hosts</code></kbd></a>;</li><li><a href="https://github.com/schickling/Device.swift" title="Github">swift 查看设备类型</a>;</li><li><a href="https://github.com/vsouza/awesome-ios" title="Github">awesome-ios</a>;</li><li><a href="https://github.com/xiaofei86/XFAssistiveTouch" title="GitHub">模仿系统小白点实现</a>;</li><li><a href="https://github.com/Desgard/DGExpandMenuButton" title="GitHub">瓜神出品的按钮菜单动画</a>;</li><li><a href="http://www.cnblogs.com/jikey/archive/2011/12/28/2304341.html" title="cnblogs">vim 命令</a>;</li><li><a href="https://github.com/JohnSundell/SwiftPlate" title="Github">cocoapods&#x2F;carthage&#x2F;…一键支持的命令行工具</a>;</li><li><a href="https://xcoder.tips/a-route-system-design/" title="xcoder">一种 App 内路由系统的设计</a>;</li><li><a href="http://lomu.me/post/linux-email-server" title="lomu">centOS服务器搭建mail服务</a>;</li><li><a href="http://www.isaced.com/post-214.html" title="isaced">初识 NSDataDetector</a>;</li><li><a href="https://github.com/dhirajjadhao/Newly" title="Github">类似twitter的新推文提醒</a>;</li><li><a href="https://github.com/Augustyniak/FileExplorer" title="Github">iOS文件浏览器</a>;</li><li><a href="https://github.com/Cosmo/TinyConsole" title="Github">手机输出log</a>;</li><li><a href="https://github.com/Augustyniak/RATreeView" title="Github">多层数据展示tableView</a>;</li><li><a href="https://github.com/nixzhu/MonkeyKing" title="Github">一个库解决支付分享</a>;</li><li><a href="https://github.com/abdullahselek/Lighty" title="Github">log信息定制</a>;</li><li><a href="https://github.com/D-32/DMSwipeCards" title="Github">左右滑卡片喜欢／不感兴趣</a>;</li><li><a href="https://github.com/malcommac/SwiftRichString" title="Github">swift 富文本</a>;</li><li><a href="https://github.com/Friend-LGA/LGSideMenuController" title="Github">抽屉效果集合</a>;</li><li><a href="https://github.com/richardtop/CalendarKit" title="Github">完整的📅控件</a>;</li><li><a href="https://github.com/ChenYilong/CYLTableViewPlaceHolder" title="Github">tableView 空白数据展位图</a>;</li><li>动画：<a href="https://github.com/lkzhao/Hero" title="Github">Hero</a> <a href="https://github.com/airbnb/lottie-ios" title="Github">lottie-ios</a>;</li><li><a href="https://github.com/KelvinJin/AnimatedCollectionViewLayout" title="Github">UICollectionViewLayout 自定义动画库</a>;</li><li><a href="https://zhuanlan.zhihu.com/p/24447089?refer=cocoanotes" title="知乎">如何在 Today Widget 上输入文字</a>;</li><li><a href="https://github.com/jessesquires/JSQMessagesViewController" title="GitHUb">jessesquires&#x2F;JSQMessagesViewController iMessage 风格的聊天UI</a>;</li><li><a href="https://github.com/danielgindi/Charts" title="Github">图表控件</a>, <a href="https://github.com/zemirco/swift-linechart" title="Github">line chart 示例工程</a>, <a href="https://github.com/gpbl/SwiftChart" title="Github">line chart CocoaPods</a>;</li><li><a href="https://github.com/olddonkey/ShadowImageView" title="Github">view的阴影效果扩展</a>;</li><li><a href="https://github.com/tingxins/SakuraKit" title="GitHub">主题切换解决方案 tingxins&#x2F;SakuraKit</a>;</li><li><a href="https://github.com/EyreFree/EFMarkdown" title="GitHub">Markdown 预览</a>;</li><li><a href="https://github.com/BalestraPatrick/WhatsNew" title="Github">一种更新说明展示</a>;</li><li><a href="https://github.com/EyreFree/EFQRCode" title="Github">生成带有图片北京的二维码，支持 GIF</a>;</li><li><a href="https://github.com/derekcoder/SwiftProgressView" title="Github">swift 圆饼式的 ProgressView</a>;</li><li><a href="https://github.com/bestswifter/BSPanoramaView" title="Github">轻量且全能的全景图组件</a>;</li><li><a href="https://github.com/Interactive-Studio/TransitionableTab" title="Github">tabBarController 转场动画</a>;</li><li><a href="https://github.com/caiyue1993/IceCream" title="Github">Sync Realm Database with CloudKit</a>;</li><li><a href="https://github.com/dillidon/alerts-and-pickers" title="Github">alerts-and-pickers</a>;</li><li><a href="https://github.com/Assuner-Lee/Stinger" title="Github">Runtime 便捷库 Stinger</a>;</li><li><a href="https://github.com/BeauNouvelle/FaceAware" title="Github">图片聚焦人脸</a>;</li><li><a href="https://github.com/marcosgriselli/ViewAnimator">列表展示动画</a>;</li><li><a href="https://github.com/ugurethemaydin/SwiftConfettiView">纸屑掉落动画</a>;</li><li><a href="https://github.com/mattt/CommonMarkAttributedString">markdown 语法生成富文本</a>;</li><li><a href="https://github.com/alexaubry/BulletinBoard">卡片式提示</a>;</li><li><a href="https://github.com/microsoft/FluentDarkModeKit">DarkMode封装向下支持</a>;</li><li><a href="https://github.com/ZionChang/EmptyKit">空数据展示</a>;</li><li><a href="https://github.com/pujiaxin33/JXSegmentedView">分栏控制器</a>;</li><li><a href="https://github.com/hyperoslo/Cache">数据持久化</a>;</li><li><a href="https://github.com/schmidyy/Loaf">通知条</a>;</li><li><a href="https://github.com/mac-gallagher/MultiProgressView">类似于 iOS 存储空间显示的进度条</a>;</li><li><a href="https://github.com/gabrieloc/roundrect">简单实现按钮图片的圆角、填充渐变色、边框</a>;</li><li><a href="https://github.com/SwipeCellKit/SwipeCellKit">cell 侧滑菜单</a>;</li><li><a href="https://github.com/cxa/MenuItemKit">UIMenuItem 增强</a>;</li><li><a href="https://github.com/optonaut/ActiveLabel.swift">富文本</a>;</li><li><a href="https://github.com/hubrioAU/XRouter">路由跳转</a>;</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;以 &lt;code&gt;alertSheet&lt;/code&gt; 的方式进行图片选取： &lt;a href=&quot;https://github.com/d0ping/DBAttachmentPickerController&quot; title=&quot;Github&quot;&gt;DBAttachmentPickerController&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/3f03897cf98a&quot; title=&quot;简书&quot;&gt;通过UIDocumentInteractionController预览和分享”史蒂夫•乔布斯传”&lt;/a&gt;:以&lt;code&gt;UIDocumentInteractionController&lt;/code&gt;进行文件分享;&lt;/li&gt;
+&lt;li&gt;压力触摸查看图片， &lt;a href=&quot;https://github.com/Yalantis/ForceBlur&quot; title=&quot;Github&quot;&gt;Yalantis&amp;#x2F;ForceBlur&lt;/a&gt;;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="参考资料" scheme="https://chengluffy.github.io/tags/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xcode8模拟器调试疯狂输出日志问题</title>
+    <link href="https://chengluffy.github.io/2016/09/22/Xcode8%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%B0%83%E8%AF%95%E7%96%AF%E7%8B%82%E8%BE%93%E5%87%BA%E6%97%A5%E5%BF%97%E9%97%AE%E9%A2%98/"/>
+    <id>https://chengluffy.github.io/2016/09/22/Xcode8%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%B0%83%E8%AF%95%E7%96%AF%E7%8B%82%E8%BE%93%E5%87%BA%E6%97%A5%E5%BF%97%E9%97%AE%E9%A2%98/</id>
+    <published>2016-09-22T07:53:31.000Z</published>
+    <updated>2017-03-10T13:13:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><span id="more"></span><p><code>product-&gt;Scheme-&gt;Edit Scheme</code></p><p><img src="/img/xcode8crazy.png" alt="xcode8crazy"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OS_ACTIVITY_MODE : disable</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="Xcode8" scheme="https://chengluffy.github.io/tags/Xcode8/"/>
+    
+    <category term="模拟器" scheme="https://chengluffy.github.io/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一种比较好玩的addSubview写法</title>
+    <link href="https://chengluffy.github.io/2016/09/21/%E4%B8%80%E7%A7%8D%E6%AF%94%E8%BE%83%E5%A5%BD%E7%8E%A9%E7%9A%84addSubview%E5%86%99%E6%B3%95/"/>
+    <id>https://chengluffy.github.io/2016/09/21/%E4%B8%80%E7%A7%8D%E6%AF%94%E8%BE%83%E5%A5%BD%E7%8E%A9%E7%9A%84addSubview%E5%86%99%E6%B3%95/</id>
+    <published>2016-09-21T11:47:10.000Z</published>
+    <updated>2017-03-10T13:14:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><span id="more"></span><p><code>addSubview</code> 是 <code>iOS</code> 编程中很常见的一个方法，常规的写法是：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let lable = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 40))</span><br><span class="line">lable.backgroundColor = UIColor.cyan</span><br><span class="line">lable.text = &quot;addSubview&quot;</span><br><span class="line">addSubview(lable)</span><br></pre></td></tr></table></figure><p>没有问题，不过当页面 <code>subViews</code> 比较多时有点乱。<br>下面介绍另外一种写法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">addSubview(&#123;</span><br><span class="line">            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 40))</span><br><span class="line">            label.backgroundColor = UIColor.cyan</span><br><span class="line">            label.text = &quot;addSubview&quot;</span><br><span class="line">            return label</span><br><span class="line">        &#125;())</span><br></pre></td></tr></table></figure><p><code>OC</code> 写法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[self.view addSubview:(&#123;</span><br><span class="line">        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];</span><br><span class="line">label.backgroundColor = [UIColor CyanColor];</span><br><span class="line">        label.text = @&quot;addSubview&quot;;</span><br><span class="line">        label;</span><br><span class="line">    &#125;)];</span><br></pre></td></tr></table></figure><p>好处是每个控件的配置集中，一目了然。 <strong>仅作参考。</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="addSubview" scheme="https://chengluffy.github.io/tags/addSubview/"/>
+    
+    <category term="iOS 小知识" scheme="https://chengluffy.github.io/tags/iOS-%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Carthage使用</title>
+    <link href="https://chengluffy.github.io/2016/09/20/Carthage%E4%BD%BF%E7%94%A8/"/>
+    <id>https://chengluffy.github.io/2016/09/20/Carthage%E4%BD%BF%E7%94%A8/</id>
+    <published>2016-09-20T02:09:09.000Z</published>
+    <updated>2016-11-24T03:33:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近使用 <code>Xcode8</code> 适配 <code>iOS10</code> ，<code>CocoaPods</code> 暴露出很多问题，于是在新版本中尝试使用 <code>Carthage</code> 进行包管理，这里仅记录使用方法。</p><span id="more"></span><h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法:"></a>安装方法:</h2><ul><li>官方给出了 <code>Homebrew</code> 的<a href="https://github.com/Carthage/Carthage#installing-carthage">安装方法</a>，不过有一句要注意:</li></ul><blockquote><p>Alternatively only on Xcode 7.x, you can use Homebrew and install the carthage tool on your system simply by running brew update and brew install carthage.</p></blockquote><p>基于上述，我们采用直接下载安装 <a href="https://github.com/Carthage/Carthage/releases">Carthage.pkg</a>.</p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h2><p>和 <code>CocoaPods</code> 不同的时我没有找到类似 <code>pod search xxx</code> 的搜索方法，目前只有在 <strong>Github</strong> 的库主页找到相应的版本号。</p><ol><li><p><code>cd</code> 到项目目录下。</p></li><li><p><code>vim Cartfile</code></p></li><li><p>以 <code>Alamofire 4.0</code> 为例，写入</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">github &quot;Alamofire/Alamofire&quot; ~&gt; 4.0</span><br></pre></td></tr></table></figure><p> 保存退出。</p></li><li><p>运行 <code>carthage update --platform ios</code>。 <code>--platform ios</code> 可以免除等待编译可能有的 <code>OS X</code> <code>tvOS</code>包的等待时间。</p></li><li><p>没有错误的话基本上目录结构如图，多说一句，在我运行 <code>update</code> 命令是有很多和 <code>Xcode7</code> 插件相关的警告 <strong>log</strong> 信息，我选择到 <code>~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/</code> 目录下删除所有插件。</p><p> <img src="/img/carthage%E7%9B%AE%E5%BD%95.png"></p></li></ol><blockquote><p>Cartfile：文件用来标注你需要哪些依赖库，对应版本或者 Git 分支（需要提交到 Git）。</p><p>Cartfile.resolved：文件用来跟踪项目当前所用的依赖版本号，为了保持多端开发一致（需要提交到 Git）。</p><p>Carthage：文件夹用来存放依赖库的源文件和编译后的文件(不需要提交到 Git，可以修改.gitignore文件，增加忽略 Carthage 文件夹就行了。</p></blockquote><ol start="6"><li>设置Xcode自动搜索Framework的目录 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Target—&gt;Build Setting—&gt;Framework Search Path—&gt;添加路径＂$(SRCROOT)/Carthage/Build/iOS＂</span><br></pre></td></tr></table></figure></li><li>添加编译的额外脚本 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Target—&gt;Build Phases —&gt;”+”—&gt;New Run Script Phase—&gt;添加脚本＂/usr/local/bin/carthage copy-frameworks＂</span><br></pre></td></tr></table></figure></li><li>添加文件 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Input Files—&gt;添加路径＂$(SRCROOT)/Carthage/Build/iOS/库名.framework＂</span><br></pre></td></tr></table></figure></li></ol><hr><p>这样就可以在项目哪正常使用了。管理版本和删除更改也很方便，推荐使用。</p><p>10.12 更新：<br>发现 <code>Carthage</code> 编译的 <code>.framework</code> 文件不支持 <code>@IBInspectable</code> 和 <code>@IBDesignable</code> ……有点蛋疼。 在使用类似 <code>IBAnimatable</code> 类似框架时，无法在 <code>storyboard</code>&#x2F;<code>xib</code> 进行操作。</p><p>11.24 更新<br>如果要使自己的开源轮子支持 <code>Carthage</code>, 参见 <a href="/2016/10/21/%E4%BD%BF%E8%87%AA%E5%B7%B1%E7%9A%84Framework%E6%94%AF%E6%8C%81Carthage/" title="chengluffy.tech">使自己的Framework支持Carthage</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近使用 &lt;code&gt;Xcode8&lt;/code&gt; 适配 &lt;code&gt;iOS10&lt;/code&gt; ，&lt;code&gt;CocoaPods&lt;/code&gt; 暴露出很多问题，于是在新版本中尝试使用 &lt;code&gt;Carthage&lt;/code&gt; 进行包管理，这里仅记录使用方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="Carthage" scheme="https://chengluffy.github.io/tags/Carthage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>根据view生成图片的笔记</title>
+    <link href="https://chengluffy.github.io/2016/08/15/%E6%A0%B9%E6%8D%AEview%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E7%9A%84%E7%AC%94%E8%AE%B0/"/>
+    <id>https://chengluffy.github.io/2016/08/15/%E6%A0%B9%E6%8D%AEview%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E7%9A%84%E7%AC%94%E8%AE%B0/</id>
+    <published>2016-08-15T14:17:14.000Z</published>
+    <updated>2016-08-15T14:23:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">UIGraphicsBeginImageContext(view.frame.size)</span><br><span class="line">let context = UIGraphicsGetCurrentContext()</span><br><span class="line">self.view.layer.renderInContext(context!)</span><br><span class="line">let image = UIGraphicsGetImageFromCurrentImageContext()</span><br><span class="line">UIGraphicsEndImageContext()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+      
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="image" scheme="https://chengluffy.github.io/tags/image/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IBAnimatable转场动画－Explode学习</title>
+    <link href="https://chengluffy.github.io/2016/08/06/IBAnimatable%E8%BD%AC%E5%9C%BA%E5%8A%A8%E7%94%BB%EF%BC%8DExplode%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://chengluffy.github.io/2016/08/06/IBAnimatable%E8%BD%AC%E5%9C%BA%E5%8A%A8%E7%94%BB%EF%BC%8DExplode%E5%AD%A6%E4%B9%A0/</id>
+    <published>2016-08-06T10:33:06.000Z</published>
+    <updated>2016-10-12T06:32:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>阅读源码后可以发现，和一般自定义转场动画一致，新建继承 <code>NSObject</code> 子类，遵守 <code>UIViewControllerAnimatedTransitioning</code> 协议。</p><span id="more"></span><p>实现两个代理方法:</p><ul><li>返回动画持续时间代理:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -&gt; NSTimeInterval &#123;</span><br><span class="line">        return 0.75</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>自定义动画代理:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func animateTransition(transitionContext: UIViewControllerContextTransitioning) &#123;    </span><br><span class="line">      // 自定义动画函数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p>参数 <code>transitionContext</code> 可以可以通过 <code>func viewForKey(key: String) -&gt; UIView?</code> &#x2F; <code>public func viewControllerForKey(key: String) -&gt; UIViewController?</code> 取出转场动画的对应 <code>fromView/toView</code> &#x2F; <code>formViewController/toViewController</code> 对应的 <code>key</code> 值:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">viewForKey:</span><br><span class="line">UITransitionContextFromViewKey</span><br><span class="line">UITransitionContextToViewKey</span><br><span class="line"></span><br><span class="line">viewControllerForKey:</span><br><span class="line">UITransitionContextFromViewControllerKey</span><br><span class="line">UITransitionContextToViewControllerKey</span><br></pre></td></tr></table></figure><p>在 <code>Explode</code> 动画中主要在于屏幕快照的获取以及快照的区域分剪，核心代码:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 获取 fromView 的快照</span><br><span class="line">let fromViewSnapshot = fromView.snapshotViewAfterScreenUpdates(false)</span><br><span class="line"></span><br><span class="line">        // 将快照剪切成小块加到 containerView 上</span><br><span class="line">        for x in 0.0.stride(to: Double(size.width), by: Double(size.width / xFactor)) &#123;</span><br><span class="line">            for y in 0.0.stride(to: Double(size.height), by: Double(size.height / yFactor)) &#123;</span><br><span class="line">                let snapshotRegion = CGRect(x: CGFloat(x), y: CGFloat(y), width: size.width / xFactor, height: size.height / yFactor)</span><br><span class="line"></span><br><span class="line">                // 按所给区域获得快照的小块</span><br><span class="line">                let snapshot = fromViewSnapshot.resizableSnapshotViewFromRect(snapshotRegion, afterScreenUpdates: false, withCapInsets: UIEdgeInsetsZero)</span><br><span class="line">                // 主要是设置位置</span><br><span class="line">                snapshot.frame = snapshotRegion</span><br><span class="line">                // 将拼成的 fromView 快照加到 containerView的最顶层</span><br><span class="line">                containerView.addSubview(snapshot)</span><br><span class="line">                snapshots.append(snapshot)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">// 将 fromView 隐藏</span><br><span class="line">containerView.sendSubviewToBack(fromView)</span><br></pre></td></tr></table></figure><p>剩下的就是对 每一个小块的动画处理，并在动画结束后调用:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ransitionContext.completeTransition(!transitionContext.transitionWasCancelled())</span><br></pre></td></tr></table></figure><p>这都很简单，难的是如何结合手势使用，这是最值得学习的地方，理解不深，可以 <strong>clone</strong> <a href="https://github.com/IBAnimatable/IBAnimatable" title="Github">源码</a> 学习。</p><p>实现过程主要是对 <code>UIPercentDrivenInteractiveTransition</code> 的学习使用，和 <code>IBAnimatable</code> 的实现不同，我们采用 <code>NavigationController</code> 管理界面，在 <code>FirstViewController</code> 的 <code>func viewWillAppear(animated: Bool) &#123;&#125;</code> 内设置代理: <code>navigationController?.delegate = self</code><br>(<strong>如果在方法: <code>func viewDidLoad() &#123;&#125;</code> 设置代理会导致转场取消后无法再次进行自定义动画转场</strong>)<br>实现代理方法:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">extension FirstViewController: UINavigationControllerDelegate &#123;</span><br><span class="line">    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -&gt; UIViewControllerAnimatedTransitioning? &#123;</span><br><span class="line">        if operation == UINavigationControllerOperation.Push &#123;</span><br><span class="line">            // ExplodeAnimator 即为自定义的转场动画</span><br><span class="line">            return ExplodeAnimator()</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return nil</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>之后就是对 <code>SecondViewController</code> 内进行自定义手势 <code>popViewController</code> :<br>首先对 <code>view</code> 添加返回手势:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">view.addGestureRecognizer(&#123;</span><br><span class="line">            let pan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(SecondViewController.pan(_:)))</span><br><span class="line">            pan.edges = UIRectEdge.Left</span><br><span class="line">            return pan</span><br><span class="line">        &#125;())</span><br></pre></td></tr></table></figure><p>手势回调方法:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">func pan(edgePan: UIScreenEdgePanGestureRecognizer) &#123;</span><br><span class="line"></span><br><span class="line">        let progress = edgePan.translationInView(self.view).x / self.view.bounds.width</span><br><span class="line"></span><br><span class="line">        if edgePan.state == UIGestureRecognizerState.Began &#123;</span><br><span class="line">            self.percentDrivenTransition = UIPercentDrivenInteractiveTransition()</span><br><span class="line">            self.navigationController?.popViewControllerAnimated(true)</span><br><span class="line">        &#125; else if edgePan.state == UIGestureRecognizerState.Changed &#123;</span><br><span class="line">            self.percentDrivenTransition?.updateInteractiveTransition(progress)</span><br><span class="line">        &#125; else if edgePan.state == UIGestureRecognizerState.Cancelled || edgePan.state == UIGestureRecognizerState.Ended &#123;</span><br><span class="line">            if progress &gt; 0.5 &#123;</span><br><span class="line">                self.percentDrivenTransition?.finishInteractiveTransition()</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                self.percentDrivenTransition?.cancelInteractiveTransition()</span><br><span class="line">            &#125;</span><br><span class="line">            self.percentDrivenTransition = nil</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p>同样，在 <code>SecondViewController</code> 的 <code>func viewWillAppear(animated: Bool) &#123;&#125;</code> 方法内设置代理: <code>navigationController!.delegate = self</code>，区别只是在于多实现一个代理方法:<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">extension SecondViewController: UINavigationControllerDelegate &#123;</span><br><span class="line"></span><br><span class="line">    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -&gt; UIViewControllerAnimatedTransitioning? &#123;</span><br><span class="line">        if operation == UINavigationControllerOperation.Pop &#123;</span><br><span class="line">            return ExplodeAnimator()</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return nil</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -&gt; UIViewControllerInteractiveTransitioning? &#123;</span><br><span class="line">        if animationController is ExplodeAnimator &#123;</span><br><span class="line">            return self.percentDrivenTransition</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return nil</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>大功告成，<br>效果展示:<br><img src="/img/ExplodeDemo.gif" alt="Demo"><br>代码地址: <a href="https://github.com/ChengLuffy/AnimatedTransitioningExplode/tree/master" title="Github">CodeDemo</a>。<br><a href="https://github.com/IBAnimatable/IBAnimatable" title="Github">IBAnimatable</a> 源码的实现基于高度的封装，这也是望尘莫及的地方。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;阅读源码后可以发现，和一般自定义转场动画一致，新建继承 &lt;code&gt;NSObject&lt;/code&gt; 子类，遵守 &lt;code&gt;UIViewControllerAnimatedTransitioning&lt;/code&gt; 协议。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="iOSDev" scheme="https://chengluffy.github.io/categories/iOSDev/"/>
+    
+    
+    <category term="IBAnimatable" scheme="https://chengluffy.github.io/tags/IBAnimatable/"/>
+    
+    <category term="转场动画" scheme="https://chengluffy.github.io/tags/%E8%BD%AC%E5%9C%BA%E5%8A%A8%E7%94%BB/"/>
+    
+    <category term="Explode" scheme="https://chengluffy.github.io/tags/Explode/"/>
+    
+  </entry>
+  
+</feed>
